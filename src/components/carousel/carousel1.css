@@ -1,0 +1,45 @@
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #2c3e50, #34495e);
+}
+
+.route-tile {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.route-tile:hover {
+  transform: scale(
+    1.05
+  ); /* On hover, slightly scale the tile for a dynamic feel */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.route-icon {
+  font-size: 24px;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-title {
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  color: #2c3e50;
+  font-weight: bold;
+  background-color: #bdc3c7;
+  transition: background-color 0.2s;
+}
+
+.route-tile:hover .route-title {
+  background-color: #95a5a6; /* On hover, darken the background of the title for a dynamic feel */
+}

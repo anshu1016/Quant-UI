@@ -1,0 +1,60 @@
+/* For the overall container, assuming you wrap all lists in this container */
+.listContainer {
+  display: flex; /* Horizontal layout */
+  flex-wrap: wrap; /* Wrap onto next line if space constraints */
+  justify-content: space-between; /* Distribute space between lists */
+  padding: 20px; /* Some padding around */
+  max-width: 100%; /* Optional, to ensure it doesn't stretch too wide on large screens */
+  margin: 0 auto; /* Center it horizontally */
+}
+
+/* Container for each list to enable flex direction */
+
+ol.text-md {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the start (left) */
+  list-style-type: none; /* Remove default list styles */
+  margin-right: 40px; /* Spacing between lists */
+  padding: 0; /* Reset default padding */
+  max-width: 200px; /* Set a max-width for consistent sizing */
+  margin-bottom: 20px; /* Space between each list */
+}
+
+/* Base styles for the text */
+.text-md li {
+  font-size: 16px; /* Medium text size */
+  padding-left: 25px; /* Space for custom list styles */
+  position: relative; /* Needed for positioning custom list styles */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+/* Styles for different list types */
+
+/* Numbers */
+.type-number li::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+}
+
+/* Uppercase alphabets */
+.type-A li {
+  list-style-type: upper-alpha;
+}
+
+/* Lowercase alphabets */
+.type-a li {
+  list-style-type: lower-alpha;
+}
+
+/* Uppercase Roman numerals */
+.upper-roman li {
+  list-style-type: upper-roman;
+}
+
+/* Lowercase Roman numerals */
+.lower-roman li {
+  list-style-type: lower-roman;
+}

@@ -1,0 +1,109 @@
+.textAlignContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  background: linear-gradient(
+    135deg,
+    #a8edea 0%,
+    #fed6e3 100%
+  ); /* Gradient background */
+  border-radius: 25px;
+  padding: 50px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 20px; /* reduce initial padding for mobile */
+  /* max-width: 100%;  */
+  /* height: auto;  */
+}
+
+.text {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 15px 25px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer; /* Indicate that it can be interacted with, like if you add onClick handlers later */
+}
+.topleftSide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  padding: 10px;
+}
+.topleftSide .text {
+  background-color: #3498db;
+  color: #ffffff;
+  align-self: flex-start;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+.center .text {
+  background-color: #f39c12;
+  color: #ffffff;
+  align-self: center;
+}
+.rightBottomSide {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  padding: 10px;
+}
+.rightBottomSide .text {
+  background-color: #2ecc71;
+  color: #ffffff;
+  align-self: flex-end;
+}
+
+/* Hover Effects */
+.text:hover {
+  transform: scale(1.05); /* subtle zoom on hover */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* deeper shadow on hover */
+}
+
+@media (min-width: 768px) {
+  .textAlignContainer {
+    padding: 40px;
+  }
+
+  .text {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  .topleftSide,
+  .center,
+  .rightBottomSide {
+    width: 300px;
+  }
+}
+
+/* Large devices and desktops */
+@media (min-width: 992px) {
+  .textAlignContainer {
+    padding: 50px;
+  }
+
+  .text {
+    font-size: 22px;
+    padding: 15px 25px;
+  }
+}
+
+/* Hover Effects (consider only on devices with hover capability) */
+@media (hover: hover) and (pointer: fine) {
+  .text:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+}

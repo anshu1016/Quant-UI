@@ -1,0 +1,150 @@
+:root {
+  --headings-color: #2c3e50;
+  --input-border: #ccc;
+  --primary-color: #3498db;
+  --secondary-input-outline-color: #f39c12;
+  --status-offline: #e74c3c;
+  --body-background: #f6f6f6;
+  --border-color: #e0e0e0;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --secondary-color: #7f8c8d;
+  --btn-danger: #e74c3c;
+}
+.inputTypeContainer {
+  display: flex; /* Horizontal layout */
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute space between lists */
+  padding: 20px; /* Some padding around */
+  max-width: 70%; /* Optional, to ensure it doesn't stretch too wide on large screens */
+  margin: 0 auto;
+  margin: 2% auto; /* Decreased margin */
+  /* padding: 1.5%;    */
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.input-row {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-label {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--headings-color);
+  /* margin: 0.5em 0; */
+}
+
+.input {
+  width: 100%;
+  padding: 1em 0.8em;
+  margin: 0.3em 0.5em 0.3em 0;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+}
+
+.input:focus {
+  outline-color: var(--primary-color);
+}
+
+.secondary-input:focus {
+  outline-color: var(--secondary-input-outline-color);
+}
+
+.required {
+  color: var(--status-offline);
+}
+
+.textarea-input {
+  height: 100px;
+}
+
+.radio-input,
+.checkbox-input {
+  cursor: pointer;
+  width: 5%;
+  font-size: 3rem;
+}
+
+.form {
+  background-color: var(--body-background);
+  border: 1px solid var(--border-color);
+  width: 350px;
+  border-radius: 5px;
+  padding: 1.5em;
+  box-shadow: var(--box-shadow);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.form-footer p {
+  font-size: small;
+}
+
+.btn-submit,
+.btn-login {
+  width: 100%;
+}
+
+.checkbox-text {
+  font-size: smaller;
+  margin-left: -10px;
+  color: var(--secondary-color);
+}
+
+.error-style {
+  color: var(--btn-danger);
+}
+
+@media (max-width: 768px) {
+  .inputTypeContainer {
+    padding: 10px; /* Reduced padding for small screens */
+  }
+
+  .input-label {
+    font-size: 1.2rem; /* Adjust font size for small screens */
+  }
+
+  .input {
+    padding: 0.8em 0.6em; /* Reduced padding */
+  }
+
+  .form {
+    width: 90%; /* Increased width to make better use of available space */
+    margin: 10px auto;
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+  .inputTypeContainer {
+    padding: 5px; /* Further reduce padding for very small screens */
+  }
+
+  .input-label {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .radio-input,
+  .checkbox-input {
+    width: 10%; /* Slightly increase the width */
+    font-size: 2rem; /* Adjust font size */
+  }
+
+  .textarea-input {
+    height: 80px; /* Reduce the height */
+  }
+}

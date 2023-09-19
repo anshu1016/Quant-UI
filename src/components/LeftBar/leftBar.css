@@ -1,0 +1,76 @@
+.leftBar {
+  width: 300px;
+  height: calc(100vh - 70px);
+  background-color: #2c3e50;
+  overflow-y: auto;
+  color: #ecf0f1;
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.leftHeader {
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #34495e; /* Slightly darker shade for the header */
+  border-bottom: 1px solid #273c75; /* Border to distinguish header */
+  display: none;
+}
+
+.leftHeader span {
+  color: #3498db;
+}
+
+.leftItems {
+  padding: 10px 0;
+}
+
+.routeList {
+  list-style-type: none; /* Removes bullets */
+  padding: 0; /* Removes default padding */
+}
+
+.routeList li {
+  padding: 10px 20px; /* Space around list items */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.routeList li:hover {
+  background-color: #34495e; /* Change color on hover */
+}
+
+.routeList li a {
+  text-decoration: none; /* Removes underline */
+  color: #ecf0f1; /* Text color */
+  display: block; /* Makes entire li clickable */
+  transition: color 0.3s ease; /* Color transition */
+}
+
+.routeList li a:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Style for Hamburger Icon */
+.hamburger {
+  display: none; /* Hidden by default (will show on mobile) */
+  position: fixed;
+
+  background-color: #2c3e50;
+  border: none;
+  color: #ecf0f1;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+@media (max-width: 768px) {
+  .leftBar {
+    display: none;
+  }
+}

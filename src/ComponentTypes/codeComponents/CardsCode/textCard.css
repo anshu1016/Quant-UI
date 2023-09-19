@@ -1,0 +1,35 @@
+.textCardContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* This gives space between cards if they wrap to the next line in responsive designs */
+  padding: 20px;
+}
+
+.card1,
+.card2 {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adding a shadow for depth */
+  border-radius: 5px; /* Rounded corners for modern look */
+  overflow: hidden; /* In case anything inside the card needs to be contained, like images */
+  padding: 20px; /* Padding inside the card */
+  flex: 1; /* This will make both cards take equal width */
+  background-color: #ffffff; /* A white background */
+  transition: transform 0.2s; /* Smooth transformation */
+}
+
+.card1:hover,
+.card2:hover {
+  transform: translateY(
+    -10px
+  ); /* Moving card slightly upwards on hover for a dynamic effect */
+}
+
+h4,
+h6 {
+  margin-bottom: 10px; /* Space between the headers and the following content */
+}
+
+.text p {
+  text-align: justify; /* Justifying text for even alignment */
+  line-height: 1.6; /* Improving readability */
+  color: #555; /* A slightly dark color for better contrast */
+}

@@ -1,0 +1,114 @@
+.badgeImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* This will give space between each badge */
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  /* Position relative to place .tag absolutely within */
+}
+
+.imageB {
+  width: 100%; /* Make sure the image takes the full width of its parent */
+  height: 100%; /* Make sure the image takes the full height of its parent */
+  object-fit: cover;
+  border-radius: 50%;
+  /* padding: 10px; */
+  cursor: pointer;
+}
+.badgeIcon {
+  font-size: 52px;
+  color: black;
+
+  /* top:10px;
+  left:0; */
+}
+.Iconsize {
+  position: absolute;
+  top: 15px;
+  right: 24px;
+}
+.tag {
+  position: absolute;
+  width: 20px; /* Increased to fit numbers better */
+  height: 20px;
+  border-radius: 50%;
+  /* Adjust to your liking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.xxlSize {
+  bottom: 20px;
+  right: 47px;
+}
+.xlsize {
+  bottom: 20px;
+  right: 27px;
+}
+.msize {
+  bottom: 20px;
+  right: 12px;
+}
+.lsize {
+  bottom: 20px;
+  right: 18px;
+}
+.ssize {
+  bottom: 20px;
+  right: 5px;
+}
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.number {
+  color: white; /* Making the number inside the tag white for visibility */
+  font-weight: bold;
+}
+
+/* ... the rest of your styles remain unchanged ... */
+
+.badge-large {
+  width: 16rem;
+  height: 16rem;
+  position: relative;
+}
+
+.badge-xl {
+  width: 12rem;
+  height: 12rem;
+  position: relative;
+}
+
+.badge-l {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+}
+.badge-m {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+}
+.badge-small {
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+}
+
+.badgeIcon {
+  position: relative;
+}

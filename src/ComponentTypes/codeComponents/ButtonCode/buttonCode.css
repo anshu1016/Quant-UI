@@ -1,0 +1,73 @@
+.buttonContaier {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s; /* for hover effect */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex; /* To align potential icons and text */
+  align-items: center; /* Vertical alignment */
+  gap: 5px; /* Space between text and icon */
+}
+
+.button button:hover {
+  transform: scale(1.05); /* Slight scaling for hover effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Box shadow on hover */
+}
+
+.button.primary button {
+  background-color: #007bff;
+  color: white;
+}
+
+.button.secondary button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.button.outline button {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.button.link button {
+  background-color: transparent;
+  color: #007bff;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.button.link button:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Slight bg color on hover */
+}
+
+.button.blueColor button {
+  background-color: #3498db;
+  color: white;
+}
+
+.button.greenColor button {
+  background-color: #28a745;
+  color: white;
+}
+
+.button.redColor button {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Adjusting the icon size */
+.button button svg {
+  width: 20px;
+  height: 20px;
+}

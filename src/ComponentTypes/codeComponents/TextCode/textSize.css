@@ -1,0 +1,42 @@
+.textSizeContainer {
+  max-width: 800px; /* adjust as needed */
+  margin: 0 auto; /* centers the container horizontally */
+  padding: 40px;
+  background-color: #f5f5f5; /* light gray background */
+  border-radius: 15px; /* rounded edges */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.paragraph {
+  margin-bottom: 20px; /* space between paragraphs */
+  color: #333; /* almost black for better readability */
+  line-height: 1.5; /* general good line-height for readability */
+  transition: color 0.3s ease; /* smooth transition for hover effects */
+}
+
+.paragraph:hover {
+  color: #007bff; /* changes color on hover */
+}
+
+.text-xl {
+  font-size: 32px;
+  font-weight: 700; /* bold */
+}
+
+.text-lg {
+  font-size: 28px;
+  font-weight: 600; /* semi-bold */
+}
+
+.text-md {
+  font-size: 24px;
+}
+
+.text-sm {
+  font-size: 20px;
+}
+
+.text-xm {
+  font-size: 16px;
+  color: #777; /* slightly grayed out for extra small text */
+}

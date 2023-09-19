@@ -1,0 +1,92 @@
+.osocialMediaCard {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 300px;
+  height: 400px; /* Set a fixed height */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.osocialMediaCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.osocialMediaCard img {
+  max-width: 100%;
+  min-height: 100%;
+  transition: transform 0.3s;
+}
+
+.osocialMediaCard:hover img {
+  transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+.osocialMediaCard h4,
+.osocialMediaCard p {
+  position: absolute;
+  z-index: 1; /* Make sure text appears above the image */
+  left: 20px;
+  color: #fff;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent black background for better text readability */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.osocialMediaCard h4 {
+  top: 20px; /* Distance from top of card */
+  max-width: 80%; /* Don't allow title to span entire width of card, making it more visually appealing */
+}
+
+.osocialMediaCard p {
+  top: 70px;
+  max-width: 90%;
+}
+
+.osocialMediaCard .actions {
+  position: absolute;
+  bottom: 20px; /* Position the action bar at the bottom of the card */
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%; /* Take up most of the card width */
+}
+
+.obuttons button {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Semi-transparent background for button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.obuttons button:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly less transparent on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.oicons span {
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.oicons span:hover {
+  transform: scale(1.1);
+  color: #007bff;
+}

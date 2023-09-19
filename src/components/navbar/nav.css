@@ -1,0 +1,258 @@
+/* nav.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #2c3e50;
+  height: 70px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /* overflow:hidden; */
+  z-index: 1000;
+  opacity: 1;
+  overflow: visible;
+}
+
+.logo {
+  flex: 1;
+  color: #ecf0f1;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: #3498db;
+}
+
+.searchBar,
+.mobileSearch {
+  margin: 0 20px;
+}
+
+.searchBar input,
+.mobileSearch input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.searchBar input:focus,
+.mobileSearch input:focus {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mobileSearch {
+  position: relative; /* To ensure .searchResults are positioned relative to this container */
+  width: 90%; /* Give some spacing from the edges on mobile */
+  margin: 10px auto; /* Center the search bar on mobile */
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex: 1;
+}
+
+.icon .sideBarThings {
+  margin-left: 15px;
+  cursor: pointer;
+  color: #ecf0f1;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+
+.icon:hover {
+  color: #3498db;
+}
+.mobileSearch {
+  display: none;
+}
+
+.leftBarr {
+  width: 300px;
+  height: calc(100vh - 70px);
+  background-color: #2c3e50;
+  overflow-y: auto;
+  color: #ecf0f1;
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+.leftHeaderr {
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #34495e; /* Slightly darker shade for the header */
+  border-bottom: 1px solid #273c75; /* Border to distinguish header */
+  display: none;
+}
+
+.leftHeaderr span {
+  color: #3498db;
+}
+
+.leftItemss {
+  padding: 10px 0;
+}
+
+.routeListt {
+  list-style-type: none; /* Removes bullets */
+  padding: 0; /* Removes default padding */
+}
+
+.routeListt li {
+  padding: 10px 20px; /* Space around list items */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.routeListt li:hover {
+  background-color: #34495e; /* Change color on hover */
+}
+
+.routeListt li a {
+  text-decoration: none; /* Removes underline */
+  color: #ecf0f1; /* Text color */
+  display: block; /* Makes entire li clickable */
+  transition: color 0.3s ease; /* Color transition */
+}
+
+.routeListt li a:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+.searchBar {
+  position: relative;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  border: 1px solid #34495e;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 2000;
+}
+
+.searchResults div {
+  padding: 10px;
+  cursor: pointer;
+  color: #ecf0f1;
+  transition: background-color 0.3s;
+}
+
+.searchResults div:hover {
+  background-color: #34495e;
+}
+.mobileSearch .searchResults {
+  top: calc(100% + 5px); /* Position below the input field */
+  left: 0;
+  right: 0; /* This ensures the dropdown takes the full width */
+  width: auto; /* We want it to use all available space */
+  border-radius: 4px; /* Optional, for rounded corners */
+  max-height: 200px; /* Adjust this based on your preference */
+  overflow-y: auto; /* To scroll through results if they exceed max-height */
+  z-index: 2000; /* Ensures the dropdown is above other content */
+}
+
+/* Style for Hamburger Icon */
+.hamburgerr {
+  display: none;
+  background-color: #2c3e50;
+  border: none;
+  color: #ecf0f1;
+  font-size: 24px;
+  cursor: pointer;
+  /* z-index: 1000; */
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .searchBar {
+    display: none;
+  }
+
+  .mobileSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid black;
+  }
+  .searchResults {
+    display: block;
+  }
+  .icon {
+    display: none;
+  }
+
+  .leftBarr {
+    display: block;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .leftBarr.open {
+    transform: translateX(0);
+  }
+
+  .mobileSearch {
+    display: block; /* Show the mobile search input */
+    position: relative; /* To ensure .searchResults are positioned relative to this container */
+    width: 90%; /* Give some spacing from the edges on mobile */
+    margin: 10px auto; /* Center the search bar on mobile */
+  }
+
+  .mobileSearch input {
+    width: 100%; /* Take full width of the container */
+  }
+
+  .mobileSearch .searchResults {
+    position: absolute;
+    top: calc(100% + 5px); /* Position below the input field */
+    left: 0;
+    right: 0; /* This ensures the dropdown takes the full width */
+    width: auto; /* We want it to use all available space */
+    background-color: #2c3e50;
+    border: 1px solid #34495e;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px; /* Optional, for rounded corners */
+    max-height: 200px; /* Adjust this based on your preference */
+    overflow-y: auto; /* To scroll through results if they exceed max-height */
+    z-index: 2000; /* Ensures the dropdown is above other content */
+  }
+
+  .hamburgerr {
+    display: block; /* Show hamburger on mobile */
+    /* position:fixed; */
+  }
+}

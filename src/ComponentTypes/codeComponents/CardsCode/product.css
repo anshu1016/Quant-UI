@@ -1,0 +1,97 @@
+.productCard {
+  position: relative;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.productCard:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.badgeContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.discountBadge,
+.wishlistBadge {
+  padding: 4px 12px;
+  border-radius: 50px; /* Rounded corners */
+  font-weight: 600;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.discountBadge {
+  background-color: #e74c3c; /* Red */
+  color: #fff;
+  position: absolute;
+  top: 10px;
+
+  left: 10px;
+}
+
+.wishlistBadge {
+  background-color: transparent;
+  color: #e74c3c; /* Red */
+  border: 1px solid #e74c3c;
+  position: absolute;
+  top: 10px;
+
+  right: 10px;
+}
+
+.productImage {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.productName {
+  margin: 15px 0 5px;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.productDetails {
+  font-size: 0.85em;
+  color: #7f8c8d; /* Slightly grayed out for a subtle look */
+  margin-bottom: 10px;
+}
+
+.productPrice {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.oldPrice {
+  font-size: 0.9em;
+  color: #95a5a6; /* Gray color */
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.addToCart {
+  padding: 10px 25px;
+  background-color: #3498db; /* Blue */
+  color: #fff;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-weight: 600;
+}
+
+.addToCart:hover {
+  background-color: #2980b9;
+}

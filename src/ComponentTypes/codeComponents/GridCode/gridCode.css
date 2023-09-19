@@ -1,0 +1,45 @@
+/* Grid container */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* This creates 3 columns */
+  gap: 15px; /* Space between grid items */
+  padding: 20px;
+  background-color: #f5f5f5; /* Light grey background for contrast */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Grid items */
+.grid-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures child content like images stay within the bounds */
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* On hover, scale the grid item for a popping effect */
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual grid item variations for differentiation */
+.grid-item1 {
+  background-color: #e3f2fd; /* Light blue background */
+}
+
+.lg-rounded {
+  border-radius: 20px; /* Larger rounded corners */
+}
+
+.grid-item img {
+  width: 100%; /* Make sure images take up full width of the grid item */
+  height: auto; /* Keep image aspect ratio */
+  display: block; /* Remove any default margins or spacing */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* On hover, fade the image slightly for a dynamic feel */
+.grid-item:hover img {
+  opacity: 0.8;
+}

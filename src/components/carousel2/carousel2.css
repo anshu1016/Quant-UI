@@ -1,0 +1,72 @@
+* {
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.cr2Main {
+  height: 100vh;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.cr2Container {
+  padding: 20px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+}
+.writtenPart {
+  flex: 1;
+  text-align: left;
+  padding: 10px 20px;
+}
+.writtenPart h3 {
+  color: white;
+  font-size: 4ch;
+  font-stretch: extra-expanded;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.writtenPart p {
+  color: rgba(255, 255, 255, 0.781);
+  font-weight: 400;
+  font-size: 2.5ch;
+  font-stretch: expanded;
+  margin-bottom: 20px;
+}
+.writtenPart button {
+  border: none;
+  border-bottom: 1px solid blue;
+  font-size: 2.8ch;
+  background-color: transparent;
+  color: #4d2db7;
+  font-weight: 500;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.writtenPart button:hover {
+  color: #0e21a0;
+  border-bottom: 2px solid #0e21a0;
+}
+.writtenPart button span:hover {
+  transition: transform 0.3s ease;
+  transform: translateX(5px);
+}
+
+.imagePart {
+  flex: 1;
+  padding: 10px 20px;
+  align-items: center;
+  text-align: center;
+  width: 350px;
+  height: 350px;
+}
+.imagePart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

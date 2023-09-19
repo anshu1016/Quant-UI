@@ -1,0 +1,161 @@
+.avatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-left: 1px solid #ccc;
+  margin-left: 300px;
+}
+
+.intro,
+.content {
+  text-align: left;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.intro h3 {
+  font-weight: bold;
+  line-height: 2.125rem;
+  text-decoration: underline;
+  font-size: 28px;
+}
+.intro p,
+.content p {
+  font-weight: 400;
+  line-height: 1.75rem;
+  margin-top: 20px;
+  text-align: justify;
+  font-size: 16px;
+  font-stretch: semi-expanded;
+}
+.content h3 {
+  font-weight: 400;
+  line-height: 1.175rem;
+}
+.outputBlock,
+.codeText {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  border-radius: 5px; /* Slight rounding for modern look */
+  margin-bottom: 20px; /* Spacing */
+}
+.outputBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.outputImage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  /* Add some space between images */
+}
+
+.outputImage img {
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: auto; /* Maintain aspect ratio */
+}
+.codeText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  justify-content: space-between; /* Distribute space */
+  padding: 20px; /* Padding for content */
+  position: relative; /* Required for positioning GitHub icon */
+  width: 100%;
+}
+.icons {
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+}
+.github:hover,
+.docs:hover {
+  color: lightskyblue;
+}
+.code {
+  width: 100%;
+  height: 400px;
+}
+.codeText iframe {
+  border: none;
+  border-radius: 5px;
+
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: scale(1);
+  overflow: hidden;
+}
+
+iframe:focus {
+  outline: none;
+}
+
+iframe[seamless] {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .avatarContainer {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .avatarContainer {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .avatarContainer {
+    padding: 10px;
+    margin-left: 0; /* Reset margin for smaller screens */
+  }
+
+  .intro,
+  .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .intro h3,
+  .content h3 {
+    font-size: 24px; /* Slightly reduce font size */
+  }
+
+  .intro p,
+  .content p {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .icons {
+    flex-direction: column; /* Stack icons vertically */
+    gap: 10px; /* Reduce gap */
+  }
+
+  .outputBlock,
+  .codeText {
+    flex-direction: column;
+    align-items: center; /* Center items */
+  }
+
+  .outputImage {
+    flex-direction: column; /* Stack images vertically */
+    gap: 20px; /* Give space between images */
+  }
+}

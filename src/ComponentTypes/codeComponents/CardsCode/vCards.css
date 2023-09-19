@@ -1,0 +1,110 @@
+.verticalCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 40px;
+  background-color: #e9ecef; /* Lighter background to make cards pop */
+}
+
+.card {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge card on hover */
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2); /* Increase shadow intensity on hover */
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.profileCard img {
+  border-radius: 50%;
+}
+
+.actionCard .actions,
+.socialMediaCard .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.actionCard .buttons,
+.socialMediaCard .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.actionCard .icons span,
+.socialMediaCard .icons span {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.actionCard .icons span:hover,
+.socialMediaCard .icons span:hover {
+  color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff; /* Primary blue color for buttons */
+  color: #fff;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-weight: 600; /* Bold font for buttons */
+}
+
+button:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* For additional variations of buttons */
+.secondary-btn {
+  background-color: #6c757d;
+}
+
+.secondary-btn:hover {
+  background-color: #5a6268;
+}
+
+.success-btn {
+  background-color: #28a745;
+}
+
+.success-btn:hover {
+  background-color: #218838;
+}
+
+.warning-btn {
+  background-color: #ffc107;
+  color: #212529; /* Dark text for better contrast on yellow */
+}
+
+.warning-btn:hover {
+  background-color: #e0a800;
+}
+
+.danger-btn {
+  background-color: #dc3545;
+}
+
+.danger-btn:hover {
+  background-color: #c82333;
+}

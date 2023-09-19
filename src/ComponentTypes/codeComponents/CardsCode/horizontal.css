@@ -1,0 +1,147 @@
+/* Base styles for the card */
+.images-card.horizontal-cart-card {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  height: 320px;
+}
+
+/* Image styles */
+.card-img {
+  width: 330px;
+  height: 288px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 16px;
+  border-right: 2px solid #e0e0e0; /* border between the image and text */
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+/* Content styles */
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-price {
+  font-size: 28px;
+  color: #ff4757; /* You can change this color to match your brand */
+  margin-bottom: 16px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #888;
+  flex: 1; /* ensures the text takes available space pushing the footer down */
+  text-align: left;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 20px;
+}
+
+/* Button styles */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  gap: 20px;
+}
+
+.btn-secondary {
+  background-color: #ff4757;
+  color: white;
+  border-radius: 4px;
+}
+
+.btn-secondary-outline {
+  border: 2px solid #ff4757;
+  color: #ff4757;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* ... Previous CSS ... */
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 992px) {
+  .images-card.horizontal-cart-card {
+    max-width: 700px;
+    height: auto; /* Allows the card to expand vertically */
+  }
+
+  .card-img {
+    width: 230px;
+    height: 200px;
+  }
+
+  .card-content,
+  .card-text {
+    font-size: 14px; /* Slightly reduce text size for better fit */
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-price {
+    font-size: 24px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .images-card.horizontal-cart-card {
+    flex-direction: column; /* Stacks image and content vertically */
+    max-width: 100%; /* Takes the full width available */
+    height: auto;
+  }
+
+  .card-img {
+    width: 100%; /* Image takes full width */
+    height: 200px;
+    margin-right: 0;
+    border-right: none; /* Removing the border */
+    margin-bottom: 16px; /* Adding space between image and content */
+  }
+
+  .card-content,
+  .card-text {
+    font-size: 12px; /* Further reduce text size for smaller screens */
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-price {
+    font-size: 22px;
+  }
+
+  .card-footer {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 8px; /* Add space between buttons */
+  }
+}

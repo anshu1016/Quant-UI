@@ -1,0 +1,48 @@
+.alertContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between each alert */
+  width: 100%;
+  max-width: 400px; /* Adjust if you need a wider alert box */
+  margin: 20px auto; /* Centering the alerts on the page */
+}
+
+.alert {
+  padding: 15px 20px; /* Padding around text and icon */
+  border-radius: 5px; /* Slight rounded edges */
+  display: flex; /* Align icon and text side by side */
+  align-items: center; /* Vertical alignment */
+  gap: 10px; /* Space between icon and text */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+  cursor: pointer; /* Indicates it's clickable or actionable */
+}
+
+.alert:hover {
+  transform: translateY(-5px); /* Move slightly upwards on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth on hover */
+}
+
+.component-icons {
+  font-size: 1.2rem; /* Adjust icon size */
+  margin-right: 10px; /* Space between the icon and text */
+}
+
+.primary-alert {
+  background-color: #007bff;
+  color: white;
+}
+
+.successfull-alert {
+  background-color: #28a745;
+  color: white;
+}
+
+.danger-alert {
+  background-color: #dc3545;
+  color: white;
+}
+
+.warning-alert {
+  background-color: #ffc107;
+  color: black; /* Dark text for better contrast on yellow background */
+}

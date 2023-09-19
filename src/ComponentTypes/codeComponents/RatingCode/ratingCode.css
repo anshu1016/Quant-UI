@@ -1,0 +1,21 @@
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.star {
+  font-size: 24px;
+  color: #d4d4d4; /* Default color for unselected stars */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: #ffd700; /* Highlight color when hovered */
+}
+
+.rating-star {
+  color: #ffd700; /* Color for rated stars */
+}
